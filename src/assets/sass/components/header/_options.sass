@@ -1,0 +1,22 @@
+.options
+    padding: 18px 0
+    border-bottom: 1px solid #c5bdbd
+    &__container
+    &__wrapper
+        display: flex   
+        justify-content: flex-end
+    &__body
+        display: flex
+    &__item
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        color: $red
+        letter-spacing: 0.7px
+        &:not(:last-child)
+            @include adaptiv-value('margin-right', 40, 20, 1)
+        &::before
+            padding-right: 7px
+        @media (any-hover: hover )
+           &:hover
+                color: #ff5454

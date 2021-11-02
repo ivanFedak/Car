@@ -1,0 +1,38 @@
+
+//----------- Hacks  -----------------\\
+
+  //Line height 24  font-size 14    24/14 * 100% = 170%-line-height
+
+      // &__image 
+      //   display: block
+      //   padding: 0 0 140/230 * 100% 0
+      //   //висота картинки 140 ширина блока 230
+
+
+  //flex 1 1 auto; //to the bottom or to the side(прибити)
+
+
+//Adaptive 'margin-bottom'
+  &__title 
+      font-weight: 600
+      @include adaptiv-value('font-size', 28, 22, 1)
+      line-height: 120%
+      &:not(:last-child)
+          margin-bottom: 4px   /  28px * 1em
+                        margin   font
+                      
+
+                      
+//Уби контент iшов дулiв в блокови
+
+    &__slide //slides
+        display: flex
+        flex-direction: column
+    &__image
+        padding: 0 0 251/391 * 100% 0 
+    &__content 
+        display: flex
+        flex-direction: column
+        flex: 1 1 auto
+    &__title
+        flex 1 1 auto

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+//-----fonts--------//
+
+//font-family: Lato, sans-serif; (400, 700, 900)
+
+
+
+//ctr + shift + p
+
+//&display=swap
+
+
+
+@import './services/mixins'
+@import './services/icons'
+$maxWidth: 1612
+
+$maxWidthContainer: 1320 + 30
+//+ 30px
+  
+  
+$md1: $maxWidthContainer + 12
+$md2: 991.98 
+$md3: 767.98
+$md4: 479.98
+
+
+$mainColor: #ffffff
+$red:  #ff3448
+
+
+
+
+
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  font-family: Lato, sans-serif
+  font-size: 16px
+  color: $mainColor
+
+
+html,body
+  height: 100%
+  // background: #fff
+
+
+
+  
+._container
+  max-width: $maxWidthContainer + px
+  padding: 0 15px
+  margin: 0 auto
+
+.wrapper 
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+  
+.page 
+	flex: 1 1 auto;
+
+._lock
+  overflow: hidden
+
+// ----------Default settings
+@import './services/default'
+
+
+
+@import './modules/ui' 
+
+//-----------Componets import-----------------\\
+  
+@import './modules/burger'
+
+
+@import './components/header/header'
+@import './components/header/options'
+
+@import './components/main/main'
+@import './components/main/details'
+@import './components/main/product'
+@import './components/main/sale'
+
+@import './components/footer/footer'
+@import './components/footer/links'
+@import './components/footer/information'
+@import './components/footer/copy'
+
+
+//-----------Componets import-----------------\\
+

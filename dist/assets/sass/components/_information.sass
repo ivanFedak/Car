@@ -1,0 +1,49 @@
+.information
+    &__container
+    &__wrapper
+        @include adaptiv-value('padding-top', 34, 10, 1)
+        @include adaptiv-value('padding-bottom', 50, 20, 1)
+        border-top: 1px solid #c9c9c9
+        border-bottom: 1px solid #c9c9c9
+
+        display: grid
+        @include adaptiv-value('gap', 100, 0, 1)
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)) 
+        @media (max-width: $md3 + px) //Less 768
+           display: block
+    &__column
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__title
+    &__body
+        @include adaptiv-value('padding-top', 37, 15, 1)
+        color: #887979
+        font-size: 15px
+        font-weight: 400
+        letter-spacing: 0.75px
+		
+
+.contact-information
+    &__body 
+        @include adaptiv-value('padding-top', 37, 15, 1)
+    &__item 
+        display: flex
+        align-items: flex-start
+
+        color: #887979
+        font-size: 17px
+        font-weight: 400
+        letter-spacing: 0.75px
+        font-family: 'Times New Roman', Times, serif
+
+        transition: all 0.3s ease 0s
+        &:not(:last-child)
+            margin-bottom: 10px
+        &::before
+            padding-right: 10px
+            color: #9c1c28
+        @media (any-hover: hover )
+           &:hover
+                color: #9c1c28
+                &::before
+                    color: #887979

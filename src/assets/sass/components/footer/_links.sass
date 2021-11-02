@@ -1,0 +1,110 @@
+
+.links
+    @include adaptiv-value('padding-top', 115, 35, 1)
+    @include adaptiv-value('padding-bottom', 90, 35, 1)
+    &__container
+    &__body
+        display: grid
+        @include adaptiv-value('gap', 100, 0, 1)
+        align-items: baseline
+        grid-template-columns: repeat(auto-fit, minmax(145px, 1fr))
+        @media (max-width: $md3 + px) //Less 768
+           display: block
+    &__column
+        @media (max-width: $md3 + px) //Less 768
+           &:not(:last-child)
+               margin-bottom: 20px
+    &__title
+        position: relative
+        text-align: left
+        padding: 5px
+        padding-bottom: 0
+    &__list
+        @include adaptiv-value('padding-top', 27, 20, 1)
+    &__item
+        &:not(:last-child)
+            margin-bottom: 11px
+    &__link 
+        color: #ff3448
+        font-size: 15px
+        font-weight: 700
+        text-align: left
+        letter-spacing: 0.75px
+        @media (any-hover: hover )
+           &:hover
+              text-decoration: underline
+
+
+
+.links-letter
+    grid-column: span 2
+    @media (max-width: $md3 + px) //Less 768
+       grid-column: 1
+    &__title
+    &__body
+        @include adaptiv-value('padding-top', 27, 20, 1)
+    &__text
+        color: #887979
+        font-size: 15px
+        font-weight: 400
+        text-align: left
+        letter-spacing: 0.75px
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 15, 10, 1)
+    &__form
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__input
+        width: 100%
+        min-height: 37px
+        border: none
+        background-color: #282828
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 25, 15, 1)
+    &__btn
+        display: inline-flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        @include adaptiv-value('min-width', 140, 100, 1)
+        @include adaptiv-value('padding-top', 8, 5, 1)
+        @include adaptiv-value('padding-bottom', 8, 5, 1)
+        background-color: #9c1c28
+        border-radius: 15px
+        transition: all 0.3s ease 0s
+        
+        color: #ffffff
+        font-size: 20px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1px
+        @media (any-hover: hover )
+           &:hover
+                background:#da2424
+        @media (max-width: $md4 + px)//Less 479
+           width: 100%
+           align-items: flex-start
+           padding-left: 15px
+    &__social
+        @include adaptiv-value('padding-top', 20, 10, 1)
+        display: flex
+        align-items: center
+        @media (max-width: $md4 + px)//Less 479
+           flex-wrap: wrap
+           justify-content: center
+    &__item
+        font-size: 24px
+        padding: 10px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all 0.3s ease 0s
+        &:not(:last-child)
+            @include adaptiv-value('margin-right', 15, 5, 1)
+        @media (any-hover: hover )
+           &:hover
+                color: #000
+                background: #ae2929

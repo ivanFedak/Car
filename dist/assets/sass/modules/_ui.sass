@@ -1,0 +1,61 @@
+
+._footer-title
+	color: #ffffff
+	@include adaptiv-value('font-size', 25, 20, 1)
+	font-weight: 700
+	text-transform: uppercase
+	letter-spacing: 1.25px
+	&::after
+		content: ''
+		display: block
+		width: 90px
+		height: 6px
+		background-color: #9c1c28
+		@include adaptiv-value('margin-top', 15, 12, 1)
+	._init & //роли подителю добавляеся клас init
+		padding: 5px
+		width: 100%
+		text-align: left
+		background: #9c1c28
+		display: flex
+		flex-direction: row-reverse
+		justify-content: space-between
+		align-items: center
+		@extend ._icon-caret-down
+		&::before
+			@extend %ic
+			font-size: 13px
+			transition: all 0.3s ease 0s
+		&::after
+			display: none
+	&._active
+		&::before
+			transform: rotate(-180deg)
+		
+	
+	
+	
+	
+
+._ibg 
+	position: relative
+	img 
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		object-fit: cover
+
+body.ie 
+	._ibg 
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+	
+	._ibg img 
+		width: 0
+		height: 0
+		opacity: 0
+		visibility: hidden
+	

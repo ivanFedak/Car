@@ -1,0 +1,71 @@
+.sale
+    position: relative
+    @include adaptiv-value('padding-top', 180, 30, 1)
+    @include adaptiv-value('padding-bottom', 110, 20, 1)
+    &__container
+    &__wrapper
+        position: relative
+        z-index: 3
+        display: flex
+        justify-content: space-between
+        @media (max-width: $md3 + px) //Less 768
+           flex-direction: column
+    &__item
+        text-align: center
+        @media (max-width: $md3 + px) //Less 768
+            &:not(:last-child)
+                @include adaptiv-value('margin-bottom', 40, 30, 1)
+    &__title
+        color: #ffffff
+        @include adaptiv-value('font-size', 82, 30, 1)
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1.75px
+        &:not(:last-child)
+           @include adaptiv-value('margin-bottom', 18, 6, 1)
+    &__subtitle
+        color: #ffffff
+        @include adaptiv-value('font-size', 40, 18, 1)
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.85px
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 28, 12, 1)
+    &__descr
+        color: #ffffff
+        @include adaptiv-value('font-size', 15, 13, 1)
+        font-weight: 400
+        letter-spacing: 0.75px
+        &:not(:last-child)
+            @include adaptiv-value('margin-bottom', 30, 10, 1)
+    &__btn
+        display: inline-flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        @include adaptiv-value('min-width', 190, 170, 1)
+        @include adaptiv-value('padding-top', 13, 7, 1)
+        @include adaptiv-value('padding-bottom', 13, 7, 1)
+        background-color: #9c1c28
+        border-radius: 15px
+        transition: all 0.3s ease 0s
+        
+        color: #ffffff
+        font-size: 20px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1px
+        @media (any-hover: hover )
+           &:hover
+                background:#666434
+
+    &__image
+        position: absolute
+        z-index: 1
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        img
+            filter: brightness(40%)
