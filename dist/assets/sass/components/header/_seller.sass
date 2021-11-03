@@ -1,0 +1,78 @@
+.seller
+    &__container
+    &__body
+        display: flex
+        align-items: center
+        @media (max-width: $md3 + px) //Less 768
+           flex-direction: column
+    &__column
+        &_logo
+            @media (min-width: $md3 + px)//More 768
+                flex: 0 0 200px
+        &_info
+            flex: 1 1 auto
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            @include adaptiv-value('margin-right', 40, 25, 1)
+            @media (max-width: $md3 + px) //Less 768
+                margin: 0 0 10px 0
+                align-items: center
+        &_list
+            display: flex
+    &__logo
+        display: flex
+        flex-direction: column  
+        align-items: center
+        color: #ffffff
+        font-family: Lato
+        font-size: 15px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 4px
+        span
+            text-align: center
+            color: #ff3448
+            @include adaptiv-value('font-size', 45, 35, 1)
+            font-weight: 900
+            text-align: left
+            letter-spacing: normal
+            text-transform: none
+
+    &__phone
+        display: flex
+
+        color: #ffffff
+        font-size: 20px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 1px
+        &:not(:last-child)
+           margin-bottom: 7px
+        &::before
+            font-size: 22px
+            color: $red
+    &__info
+        color: #a2a2a2
+        font-size: 14px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 0.7px
+        text-align: right
+    &__icon
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        color: #ffffff
+        font-size: 15px
+        font-weight: 700
+        text-transform: uppercase
+        letter-spacing: 0.75px
+        &:not(:last-child)
+            @include adaptiv-value('margin-right', 30, 15, 1)
+        &::before
+            font-size: 24px
+            color: $red
+            margin-bottom: 5px
